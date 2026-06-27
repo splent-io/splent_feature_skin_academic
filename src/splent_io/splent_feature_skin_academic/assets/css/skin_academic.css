@@ -1,0 +1,262 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   skin_academic — DIVERSO LAB academic / university research-lab look.
+   Sober, institutional personality layered over the theme's base public.css:
+   serif Roboto Slab headings, Oswald uppercase eyebrows, thin 1px borders,
+   very soft shadows, generous whitespace, a crimson primary, boxed container.
+   Loaded after public.css (via layout.head), so these rules win.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+body.cms-public {
+    background-color: #ffffff;
+    color: #2b2b2b;
+    /* faint crimson accent line across the very top of the page */
+    border-top: 3px solid #DD3333;
+}
+
+body.cms-public h1,
+body.cms-public h2,
+body.cms-public .hero-title,
+body.cms-public .card__title {
+    font-family: 'Roboto Slab', Georgia, serif;
+    letter-spacing: .01em;
+    color: #222222;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.cms-public .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
+    backdrop-filter: none;
+}
+.cms-public .site-brand {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #222222;
+    letter-spacing: .01em;
+}
+.cms-public .site-nav a {
+    font-family: 'Oswald', system-ui, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: .82rem;
+    letter-spacing: .08em;
+    color: #4b5563;
+}
+.cms-public .site-nav a:hover { color: #DD3333; }
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+.cms-public .block-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #F7F7F8 100%);
+    border-bottom: 1px solid #e5e7eb;
+    padding-block: 5rem;
+}
+.cms-public .hero-eyebrow {
+    font-family: 'Oswald', system-ui, sans-serif;
+    color: #DD3333;
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .18em;
+    font-size: .8rem;
+}
+.cms-public .hero-title {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    color: #222222;
+    line-height: 1.12;
+    letter-spacing: .005em;
+    /* thin crimson rule under the title */
+    padding-bottom: 1.1rem;
+    border-bottom: 2px solid #DD3333;
+    display: inline-block;
+}
+.cms-public .hero-subtitle {
+    color: #6b7280;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* ── Buttons: sober, subtle ─────────────────────────────────────────────── */
+.cms-public .btn-primary {
+    background: #DD3333;
+    color: #ffffff;
+    border: 1px solid #DD3333;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(221, 51, 51, 0.18);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-family: 'Oswald', system-ui, sans-serif;
+    font-weight: 500;
+    transition: background .15s ease, box-shadow .15s ease;
+}
+.cms-public .btn-primary:hover {
+    background: #B02A2A;
+    border-color: #B02A2A;
+    box-shadow: 0 4px 10px rgba(176, 42, 42, 0.22);
+}
+.cms-public .btn-ghost {
+    background: transparent;
+    color: #DD3333;
+    border: 1px solid #DD3333;
+    border-radius: 6px;
+    box-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-family: 'Oswald', system-ui, sans-serif;
+    font-weight: 500;
+    transition: background .15s ease, color .15s ease;
+}
+.cms-public .btn-ghost:hover {
+    background: #DD3333;
+    color: #ffffff;
+}
+
+/* ── Cards: white, hairline border, very soft shadow, subtle lift ───────── */
+.cms-public .card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(17, 24, 39, 0.06);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.cms-public .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.10);
+    border-color: #d1d5db;
+}
+.cms-public .card__title {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 500;
+    color: #222222;
+}
+
+/* ── Badge: small, subtle crimson tint ──────────────────────────────────── */
+.cms-public .badge {
+    background: rgba(221, 51, 51, 0.08);
+    color: #B02A2A;
+    border: 1px solid rgba(221, 51, 51, 0.25);
+    border-radius: 999px;
+    box-shadow: none;
+    font-family: 'Oswald', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .72rem;
+    font-weight: 500;
+}
+
+/* ── Section title: Oswald uppercase + short crimson underline ──────────── */
+.cms-public .section-title {
+    font-family: 'Oswald', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 600;
+    color: #222222;
+    position: relative;
+    padding-bottom: .75rem;
+}
+.cms-public .section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background: #DD3333;
+}
+
+/* ── Feature: clean ─────────────────────────────────────────────────────── */
+.cms-public .feature {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(17, 24, 39, 0.05);
+}
+.cms-public .feature h3 {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 500;
+    color: #222222;
+}
+
+/* ── Countdown: clean bordered ──────────────────────────────────────────── */
+.cms-public .countdown__unit {
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(17, 24, 39, 0.05);
+    background: #ffffff;
+    border-radius: 6px;
+}
+.cms-public .countdown__num {
+    color: #DD3333;
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+}
+
+/* ── Logo wall: clean ───────────────────────────────────────────────────── */
+.cms-public .logo-wall__item {
+    border: 1px solid #e5e7eb;
+    box-shadow: none;
+    background: #ffffff;
+    color: #4b5563;
+    border-radius: 6px;
+    font-family: 'Oswald', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: .85rem;
+}
+
+/* ── Gallery: thin border ───────────────────────────────────────────────── */
+.cms-public .gallery-grid__item {
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(17, 24, 39, 0.06);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* ── CTA banner: crimson background, white text ─────────────────────────── */
+.cms-public .cta-banner {
+    background: #DD3333;
+    border-block: 0;
+}
+.cms-public .cta-banner h2 {
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #ffffff;
+    text-shadow: none;
+}
+.cms-public .cta-banner p { color: rgba(255, 255, 255, 0.9); }
+.cms-public .cta-banner .btn-primary {
+    background: #ffffff;
+    color: #B02A2A;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+}
+.cms-public .cta-banner .btn-primary:hover {
+    background: #F7F7F8;
+    color: #B02A2A;
+}
+
+/* ── Footer: refined dark slate with light text ─────────────────────────── */
+.cms-public .site-footer {
+    background: #1f2937;
+    border-top: 3px solid #DD3333;
+    color: #d1d5db;
+}
+.cms-public .site-footer__name {
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #ffffff;
+    font-weight: 700;
+}
+.cms-public .site-footer__name::before {
+    /* subtle crimson tint accent on the name */
+    content: "";
+}
+.cms-public .site-footer__tagline { color: #9ca3af; }
+.cms-public .site-social a { color: #d1d5db; }
+.cms-public .site-social a:hover { color: #DD3333; }
+.cms-public .site-footer__legal { color: #6b7280; }
