@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "splent_feature_skin_academic"
-version = "0.0.1"
+version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.13"
 
@@ -23,34 +23,30 @@ exclude = ["*.tests", "*.tests.*"]
 [tool.splent]
 cli_version = "1.11.0"
 
-# ── Feature Contract ──────────────────────────────────────────────────────────
-# Declares what this feature provides to and requires from the product.
-# Used by `splent feature:check` and `splent product:derive` for validation.
+# ── Feature Contract (auto-generated) ────────────────────────────────────────
+# Do not edit manually — re-run `splent feature:contract --write` to refresh.
 [tool.splent.contract]
 description = "skin_academic — DIVERSO LAB academic look (tokens + skin.css)"
 
 [tool.splent.contract.provides]
-# Routes exposed by this feature
-routes = []
-# Blueprint names registered into Flask
-blueprints = ["skin_academic_bp"]
-# SQLAlchemy models introduced by this feature
-models = []
-# CLI commands added by this feature
-commands = []
+routes     = []
+blueprints = []
+models     = []
+commands   = []
+hooks      = []
+services   = []
+signals    = []
+translations = []
+docker     = []
 
 [tool.splent.contract.requires]
-# Other SPLENT features this feature depends on (e.g. ["auth", "mail"])
-features = ["theme"]
-# Environment variables this feature expects to be set
+features = []
 env_vars = []
+signals  = []
 
-# ── Extension points ──────────────────────────────────────────────────────────
-# Declares what other features can override or extend via refinement.
-# See: splent feature:xray
 [tool.splent.contract.extensible]
-services = []
-templates = []
-models = []
-hooks = []
-routes = false
+services  = []
+templates = ["skin_academic/index.html"]
+models    = []
+hooks     = []
+routes    = false
