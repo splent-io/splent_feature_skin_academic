@@ -56,7 +56,8 @@ body.cms-public .card__title {
     font-family: 'Oswald', system-ui, sans-serif;
     color: #DD3333;
     background: transparent;
-    display: inline-block;
+    display: block;
+    margin: 0 0 .6rem;
     padding: 0;
     border: 0;
     box-shadow: none;
