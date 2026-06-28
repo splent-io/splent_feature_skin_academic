@@ -23,9 +23,18 @@ ACADEMIC_TOKENS = {
 
 
 def init_feature(app):
-    # A skin sets the theme tokens; skin.css (via the layout.head hook) adds the
-    # concrete look on top of the theme's brand-agnostic base stylesheet.
+    # A skin sets the theme tokens and registers its stylesheet (order 200, so it
+    # cascades last) on top of the theme's brand-agnostic base public.css.
+    from splent_framework.assets.asset_registry import register_asset
+
     app.config["THEME_TOKENS"] = ACADEMIC_TOKENS
+    register_asset(
+        "css",
+        "skin_academic.assets",
+        order=200,
+        subfolder="css",
+        filename="skin_academic.css",
+    )
 
 
 def inject_context_vars(app):
